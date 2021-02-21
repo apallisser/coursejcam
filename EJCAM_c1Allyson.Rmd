@@ -1,0 +1,277 @@
+---
+title: "Data curation, open data et open content"
+subtitle: ""
+author: "Allyson Pallisser, Datactivist"
+date: "EJCAM, `r Sys.Date()`"
+output:
+  SlidesDatactivist::moon_reader:
+    css: [default, datactivist, datactivist-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: ["macros.js", "matomo.js", "https://platform.twitter.com/widgets.js"]
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    anchor_sections: false
+params:
+  event: Cours Data Curation EJCAM
+  slug: datacurationj1
+  description: Cours Data Curation EJCAM
+  title: Mon joli titre de présentation
+  image: https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png
+  image_alt: le logo de Datactivist
+---
+
+```{r, echo=FALSE}
+library(metathis)
+meta() %>% 
+  meta_description(params$event) %>% 
+  meta_name("github-repo" = paste0("datactivist/", params$slug)) %>% 
+  meta_viewport() %>% 
+  meta_social(
+    title = params$title,
+    url = paste0("https://datactivist.coop/", params$slug),
+    image = params$image,
+    image_alt = params$image_alt,
+    og_type = "website",
+    og_author = "Datactivist",
+    og_locale = "fr_FR",
+    og_site_name = "Datactivist",
+    twitter_card_type = "summary",
+    twitter_creator = "@datactivi_st")
+
+```
+
+layout: true
+
+<style>
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #e95459;
+}
+
+</style>
+
+
+`r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><a href='https://datactivist.coop/'><img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'></a></div></center></span></div>")` 
+
+
+---
+
+class: center, middle
+
+Ces slides en ligne : `r paste0("http://datactivist.coop/", params$slug)`
+
+Sources : `r paste0("https://github.com/datactivist/", params$slug)`
+
+
+Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+<BR>
+<BR>
+
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+
+---
+class: inverse, center, middle
+
+# Qui sommes nous ?
+
+
+---
+## .red[Retour en arrière]
+
+### Trois moments-clès dans l'histoire de l'open data 
+
+
+**- Les principes de Sébastopol (2007) ;** 
+
+**- "Raw data now", l'ouverture par défaut (2009) ;**
+
+**- L'open data Charter (2013) ;**
+
+
+- Suite à ce "premiers temps" dans l'histoire de l'open data, des nouveaux enjeux sont apparus... 
+
+
+---
+## Open by default vs open by demand 
+
+- Sur le terrain, lors des projets liés à l'open data, des acteurs divers et variés ont commencé à se rendre compte des limitations de "l'open by default", faisant naître une nouvelle "méthodologie" : le "publishing with a purpose". 
+
+- Un bilan mitigé ?
+
+- Le cas de Synapse C au Canadá et l'approche par le problème. 
+
+
+---
+## D'un open data de l'offre à un .red[open data de la demande]
+
+Aujourd’hui en France, les administrations choisissent les données à ouvrir, elles décident du quand et du comment .red[**sans consulter les usagers**].
+
+Les données ouvertes sont souvent décevantes : pas à jour, trop agrégées, mal documentées, mal formatées, parfois inutilisables. 
+
+Il faut aujourd’hui passer à l’étape supérieure : .red[**un open data piloté par la demande**].
+
+Mais c'est difficile : demande peu visible, pas de possibilité de soumettre la communication des données à l'expression d'une demande. Leviers : demandes d'ouverture, plateformes, animations (ex : hackathon), gouvernance partagée...
+
+
+---
+class: inverse, center, middle
+
+# Rendre la donnée acessible : parlons portails !
+
+
+---
+## Acceder aux données ouvertes 
+
+- Depuis 2016, la *Loi pour une République Numérique* (Loi Lemaire), oblige les collectivités territoriales à publier leurs données. Néanmoins, selon une étude de l'Observatoire Open Data France de décembre 2020, juste 11,03% d'entre elles le font*. 
+
+- Plusieurs raisons expliquent ces chiffres, notamment le manque de capital technique au sein des collectivités, c'est-à-dire, agents formés et capables de mettre en place ce type de démarche.
+
+- Néanmoins, ces projets open data au sein des collectivités sont traduits et visibles grâce aux portails open data. 
+
+- Ils sont responsables pour rendre les données disponibles sur le web, faisant **la médiation entre les producteurs des données et les réutilisateurs**. Les portails sont bien souvent les vitrines d’un projet open data.
+
+
+
+
+
+--- 
+class: inverse, center, middle
+
+# Exercice ! 
+
+
+--- 
+## L'open source vs le cloud 
+
+ Aujourd’hui, deux technologies sont plus visibles : 
+
+.red[**– CKAN :**] une des premières solutions à voir le jour, le CKAN est **open source** et a été développée par l’OKFN. La solution est toujours bien répondue partout dans le monde, États-Unis, Brésil et Canada sont exemples.
+
+.red[**– SaaS :**] les solutions **« Software as a service »** développées pour les portails open data sont également bien répondues, contrairement à CKAN, ces solutions sont exploitées commercialement par des entreprises qui proposent une solution « clé en main ». Trois entreprises bien connues dans le domaine sont : ArcGis Hub (USA), Open Data Soft (FR) et Socrata (USA).
+
+Crée en CKAN dans un premier temps, **data.gouv.fr** utilise actuellement UData, un code « fait maison ». En France, plusieurs collectivités (comme la ville de Paris) utilisent **Open Data Soft**.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+## Ouvrir ses données : les étapes
+
+
+???
+
+La collectivité est toujours la première réutilisatrice de ses propres données.
+
+---
+## Réussir sa stratégie d'ouverture des données 
+
+- Au-delà de l'obligation légale : .red[**poser les objectifs**] poursuivis par la stratégie
+
+- Se donner les moyens de connaître la .red[**demande de données**] pour y répondre (voir par ex. [DODOdata.io](https://dododata.io))
+
+- Travailler à la .red[**qualité des données**], garante d'usages réels
+
+- Mener le projet d'ouverture des données comme un projet de modernisation de l'administration (transversalité, agilité, lean...)
+
+???
+
+Une stratégie qui peut/doit englober la question de la data en général.
+Croiser aussi avec le RGPD ! 
+
+---
+## Réussir sa stratégie d'ouverture des données 
+
+- Une ouverture des données .red[**orientée vers l'utilisateur**] : pousser les données là où sont les usagers et non l'inverse. Enjeu essentiel de la .red[**découvrabilité**] des données
+
+- Construire une .red[**offre de services**] pour son écosystème (public et privé)
+
+- Distinguer ouverture de ses données, et infrastructures de partage des données en termes de gouvernance.
+
+???
+
+Le premier est le métier de l'acteur public, le deuxième l'est-il ? Quelle gouvernance des plateformes d'ouverture des données ?
+Aller vers un Etat(collectivité)-plateforme
+Tiers de confiance
+
+---
+## Réussir sa stratégie d'ouverture des données 
+
+- Aller vers un .red[**service métropolitain de la donnée**]
+
+- Poser la question des .red[**données d'intérêt général**]
+
+- .red[**Réarmer le service public**] à l'heure de la révolution des données : big data, algorithmie... 
+
+---
+## Faire la pub du canvas 
+
+<blockquote class="twitter-tweet" data-dnt="true" data-cards="hidden" data-conversation="none"><p lang="fr" dir="ltr">📣A l’occasion de notre 3e anniversaire, nous publions aujourd&#39;hui une version alpha de l&#39;Open Data Canvas ! <br><br>Nous vous expliquons tout dans cet article, et vos retours sont plus que bienvenus sur l&#39;espace <a href="https://twitter.com/hashtag/TeamOpenData?src=hash&amp;ref_src=twsrc%5Etfw">#TeamOpenData</a> qui lui est dédié ! <a href="https://t.co/SIBAbQoylS">https://t.co/SIBAbQoylS</a></p>&mdash; datactivist (@datactivi_st) <a href="https://twitter.com/datactivi_st/status/1174397047606317056?ref_src=twsrc%5Etfw">September 18, 2019</a></blockquote> 
+
+---
+## Positionner une image
+
+![:abs 30%, 20%, 65%](https://datactivist.coop/images/sticker-3.png)
+
+---
+class: inverse, center, middle
+
+# Merci !
+
+Contact : [joel@datactivist.coop](mailto:joel@datactivist.coop)
+
+
+
+
+
+
+
+
+
+
+* Source :https://www.acteurspublics.fr/articles/90-des-collectivites-locales-ne-respectent-toujours-pas-leurs-obligations-en-matiere-d-open-data
+
+
+
