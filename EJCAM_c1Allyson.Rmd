@@ -116,7 +116,7 @@ class: inverse, center, middle
 ---
 ## Open by default vs open by demand 
 
-- Sur le terrain, lors des projets liés à l'open data, des acteurs divers et variés ont commencé à se rendre compte des limitations de "l'open by default", faisant naître une nouvelle "méthodologie" : le "publishing with a purpose". 
+- Sur le terrain, lors des projets liés à l'open data, des acteurs divers et variés ont commencé à se rendre compte des limitations de "l'open by default", faisant naître une nouvelle "méthodologie", centré sur les problèmes. 
 
 - Un bilan mitigé ?
 
