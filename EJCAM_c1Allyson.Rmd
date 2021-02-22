@@ -153,19 +153,51 @@ class: inverse, center, middle
 - Ils sont responsables pour rendre les données disponibles sur le web, faisant **la médiation entre les producteurs des données et les réutilisateurs**. Les portails sont bien souvent les vitrines d’un projet open data.
 
 
-
-
-
---- 
+---
 class: inverse, center, middle
 
 # Exercice ! 
 
 
---- 
-## L'open source vs le cloud 
+---
+## La technologie derrière les portails open data
 
- Aujourd’hui, deux technologies sont plus visibles : 
+### .red[L'open source] 
+
+- CKAN 
+
+- GeoNetwork 
+
+- UData
+
+- Neogeo
+
+- Jkan
+
+- Dkan
+
+
+---
+## La technologie derrière les portails open data 
+
+### .red[Les solutions propriétaires]
+
+- Socrata 
+
+- ArcGIS Hub 
+
+- Open Data Soft 
+
+- Koumoul 
+
+- Junar 
+
+
+
+---
+## CKAN vs les solutions "clé en main"
+
+ Aujourd’hui, l'avancée des solutions propriétaires est bien visible, même si le CKAN reste majeur. 
 
 .red[**– CKAN :**] une des premières solutions à voir le jour, le CKAN est **open source** et a été développée par l’OKFN. La solution est toujours bien répondue partout dans le monde, États-Unis, Brésil et Canada sont exemples.
 
@@ -174,12 +206,18 @@ class: inverse, center, middle
 Crée en CKAN dans un premier temps, **data.gouv.fr** utilise actuellement UData, un code « fait maison ». En France, plusieurs collectivités (comme la ville de Paris) utilisent **Open Data Soft**.
 
 
+---
+class: inverse, center, middle
+
+# Exercice ! 
+
+### .red[Comparez les 5 grandes fonctions de 5 portails open data pour l’utilisateur des données :] 
+
+**Naviguer, Interagir, Comprendre, Exporter/Telecharger, Prévisualiser.**
 
 
-
-
-
-
+---
+## 
 
 
 
